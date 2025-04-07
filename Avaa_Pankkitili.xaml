@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Avaa_Pankkitili" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Avaa_Pankkitili_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Avaa_Pankkitili" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="643,2137" sap2010:WorkflowViewState.IdRef="Avaa_Pankkitili_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -25,6 +25,12 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -51,13 +57,114 @@
       <AssemblyReference>System.Xml.Linq</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Avaa_Pankkitili" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Avaa_Pankkitili" sap:VirtualizedContainerService.HintSize="568,2072" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Netvisor :: Pankkitilit" sap:VirtualizedContainerService.HintSize="506,1961" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="472,1744" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="PankkiTuettu" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckElement DelayBefore="0" DisplayName="Check Element 'Tuettu'" sap:VirtualizedContainerService.HintSize="410,157" sap2010:WorkflowViewState.IdRef="NCheckElement_2" Result="[PankkiTuettu]" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Version="V3">
+              <uix:NCheckElement.Target>
+                <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/admin/banking/bankaccounts.aspx#/" DesignTimeRectangle="585, 361, 78, 24" DesignTimeScaleFactor="1" FriendlyName="'Tuettu'" FullSelectorArgument="&lt;webctrl parentid='root' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='root' tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='sc-iHGNWf iDqPXO' aaname='Tuettu' check:innerText='Tuettu' /&gt;" Guid="c1ca103c-3bf2-40ff-bfd0-7c1679fbac80" InformativeScreenshot="0f87aaf5efd5a72aaf2d4d2d85cf731d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Pankkitilit' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NCheckElement.Target>
+            </uix:NCheckElement>
+            <If Condition="[Not PankkiTuettu]" sap:VirtualizedContainerService.HintSize="410,1432" sap2010:WorkflowViewState.IdRef="If_3">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,1019" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Luo virtuaaliympäristön pankkitili'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/admin/banking/bankaccounts.aspx#/" DesignTimeRectangle="856, 242, 251, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Luo virtuaaliympäristön'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='sc-gFqAkR fWWYdr' aaname='Luo virtuaaliympäristön pankkitili' check:innerText='Luo virtuaaliympäristön pankkitili' /&gt;" Guid="235266b8-8699-4a24-b63f-f4782cd46bb0" InformativeScreenshot="27aa5b075ac533faf1ef886546318c47.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Pankkitilit' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Kirjanpidon tili'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/admin/banking/bankaccounts.aspx#/bank-account/77165fb8-a3ba-412d-8708-e70b38c3071d" DesignTimeRectangle="1007, 686, 296, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;aside&amp;gt;section&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' parentid='bookkeeping_account' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='select__input-container css-19bb58m' parentid='bookkeeping_account' tag='DIV' aaname='' /&gt;" Guid="b0558fba-394c-4db4-bf68-f561700bb175" InformativeScreenshot="daefbae0e9957ad0165d5e40eeb90985.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Pankkitilit' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target DesignTimeRectangle="996, 662, 81, 18" ElementType="Text" FriendlyName="'Kirjanpidon tili'" FullSelectorArgument="&lt;webctrl aaname='Kirjanpidon tili' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Kirjanpidon tili' tag='SPAN' type='' class='sc-jlZhew OoaxX' check:innerText='Kirjanpidon tili' /&gt;" SearchSteps="FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '1920 - Pankkitili 2'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/admin/banking/bankaccounts.aspx?page_transaction=529426#/bank-account/77165fb8-a3ba-412d-8708-e70b38c3071d" DesignTimeRectangle="996, 788, 342, 32" DesignTimeScaleFactor="1" FriendlyName="'1920 - Pankkitili 2'" FullSelectorArgument="&lt;webctrl aaname='1920 - Pankkitili 2' aria-role='option' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='1920 - Pankkitili 2' aria-role='option' tag='DIV' type='' class='select__option select__option--is-selected css-80b8db-option' check:innerText='1920 - Pankkitili 2' /&gt;" Guid="c4b1161b-ff10-4f1a-abc1-54bd031e5b95" InformativeScreenshot="5eaf4f95e2a58f54a7792233a9090fa8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Pankkitilit' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Tallenna'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/admin/banking/bankaccounts.aspx?page_transaction=529426#/bank-account/77165fb8-a3ba-412d-8708-e70b38c3071d" DesignTimeRectangle="1268, 1133, 88, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Tallenna'" FullSelectorArgument="&lt;webctrl aaname='Tallenna' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Tallenna' tag='BUTTON' type='button' class='sc-gFqAkR kqjLxZ' check:innerText='Tallenna' /&gt;" Guid="f9e059ae-1bca-4b95-a585-fc3ed64cb285" InformativeScreenshot="e5e06f059576c434ccbae3057d14029a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Pankkitilit' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Uusi pankkitili luotu&quot;]" />
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,231" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Pankkitili oli jo olemassa&quot;]" />
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="10, 87, 1384, 1193" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFwSURBVDhPvZExT8JAFMcfnSQuavwM+gn8GCYsakiUEqiDbhCjyASjkQW1JKKWqIkkLDoygqQDjTFpVDS0SCo9CDpolFgmz/SKQo8BJv7Jf7n3/r+7ew9gZMLYwSE17kNPs3RpKHFIOeKQgjmkZOnaQHGo7O6Eif111UX3dBV/DwLfvgTeWIUUHjOPOKRe2ABIrQZqNScdBdiWdiHWvAW+jTt+gYSx7EcK3wsgEF0J9IfDEoZoKdcDIJ5KfxbmteeS/RVK2RysFV6/CsGWWISwZBDvfdVpiENs5ifua8VFrdLoQH7WNG0SwH04DayAiX1nDdgsFCD6kKcBkPx+Y2S9xci6MX6nS3OVasi6PRJhgBWUf4hpLv0IO3WRhjiuX3OMrGNG1mO274MnFbQBLO/DgbFCBvkHyHzc9IdNLWScwApVCnBOauYqzZWaqz1ubdDRrrwplw3gEZbolsHyClkrfJKkS8PJczoDrJAggx2VfgGSHh1FGO1/EgAAAABJRU5ErkJggg==" InformativeScreenshot="e1e4c9dcecbd8a1c35fc23df9903067e.jpg" Selector="&lt;html app='msedge.exe' title='Netvisor :: Pankkitilit' /&gt;" Title="Netvisor :: Pankkitilit" Url="https://koulutus.netvisor.fi/evo/admin/banking/bankaccounts.aspx#/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
   </Sequence>
 </Activity>

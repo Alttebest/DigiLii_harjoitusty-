@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Kirjaudu_Ulos" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1858,1393" sap2010:WorkflowViewState.IdRef="Kirjaudu_Ulos_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Kirjaudu_Ulos" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="643,1393" sap2010:WorkflowViewState.IdRef="Kirjaudu_Ulos_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -89,7 +89,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Netvisor :: Tiedotusnäkymä" sap:VirtualizedContainerService.HintSize="546,1217" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="953e9ee0-0bda-4f89-b1bc-63c361b8316a" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: Netvisor :: Tiedotusnäkymä" sap:VirtualizedContainerService.HintSize="546,1217" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="953e9ee0-0bda-4f89-b1bc-63c361b8316a" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -111,7 +111,7 @@
                 <uix:NHover.Target>
                   <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi//evo/landingpages/home.aspx" DesignTimeRectangle="2471, 82, 78, 30" DesignTimeScaleFactor="1" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl parentid='nvm_myNameCustom' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='nvm_myNameCustom' tag='SPAN' type='' class='nv-icon nv-icon--user nvm-tmr-menulink__icon' aaname='' /&gt;" Guid="c3cd670e-fb21-4267-88bd-48d7fbe9a2c7" InformativeScreenshot="eec769958a5190e96a032a0619e9d163.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Tiedotusnäkymä' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                     <uix:TargetAnchorable.Anchors>
-                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                         <uix:Target DesignTimeRectangle="2471, 112, 78, 21" ElementType="Text" FriendlyName="'Excel'" FullSelectorArgument="&lt;webctrl class='nvm-tmr-menulink__title--name' parentid='nvm_myNameCustom' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='nvm-tmr-menulink__title--name' parentid='nvm_myNameCustom' tag='SPAN' type='' aaname='Excel' check:innerText='Excel' /&gt;" SearchSteps="FuzzySelector" />
                       </scg:List>
                     </uix:TargetAnchorable.Anchors>
