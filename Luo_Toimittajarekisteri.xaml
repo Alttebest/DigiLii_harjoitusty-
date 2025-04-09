@@ -80,7 +80,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Luo_Toimittajarekisteri" sap:VirtualizedContainerService.HintSize="848,3670" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence DisplayName="Luo_Toimittajarekisteri" sap:VirtualizedContainerService.HintSize="512,192" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="startDay" />
       <Variable x:TypeArguments="x:String" Name="payLimitStr" />
@@ -97,7 +97,8 @@
     <Sequence DisplayName="Kysy_Tietoja" sap:VirtualizedContainerService.HintSize="786,3559" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Sequence DisplayName="Aloituspäivämäärä" sap:VirtualizedContainerService.HintSize="724,1157" sap2010:WorkflowViewState.IdRef="Sequence_5">
@@ -114,7 +115,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="534,239" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Anna päivämäärä muodossa pp/kk/vvvv:" Title="Syötä aloituspäivämäärä">
+              <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="534,239" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Anna päivämäärä muodossa pp/kk/vvvv: " Title="Syötä aloituspäivämäärä">
                 <ui:InputDialog.Result>
                   <OutArgument x:TypeArguments="x:String">[startDay]</OutArgument>
                 </ui:InputDialog.Result>
