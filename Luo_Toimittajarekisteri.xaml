@@ -1,11 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Luo_Toimittajarekisteri" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ueabf="clr-namespace:UiPath.Excel.Activities.Business.Filter;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Luo_Toimittajarekisteri" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ueabf="clr-namespace:UiPath.Excel.Activities.Business.Filter;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1874,1815</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1874,4178</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Luo_Toimittajarekisteri_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -47,6 +47,18 @@
       <x:String>UiPath.DataTableUtilities</x:String>
       <x:String>UiPath.Excel.Activities.Business.Filter</x:String>
       <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -107,6 +119,12 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -114,7 +132,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Luo_Toimittajarekisteri" sap:VirtualizedContainerService.HintSize="826,2565" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence DisplayName="Luo_Toimittajarekisteri" sap:VirtualizedContainerService.HintSize="1466,4113" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="startDay" />
       <Variable x:TypeArguments="x:String" Name="payLimitStr" />
@@ -133,14 +151,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Kysy_Tietoja" sap:VirtualizedContainerService.HintSize="764,81" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="Kysy_Tietoja" sap:VirtualizedContainerService.HintSize="1404,81" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Aloituspäivämäärä" sap:VirtualizedContainerService.HintSize="450,163" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <Sequence DisplayName="Aloituspäivämäärä" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_5">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -320,7 +338,7 @@
         </ui:InterruptibleDoWhile>
       </Sequence>
     </Sequence>
-    <Sequence DisplayName="Lue_Data" sap:VirtualizedContainerService.HintSize="764,81" sap2010:WorkflowViewState.IdRef="Sequence_25">
+    <Sequence DisplayName="Lue_Data" sap:VirtualizedContainerService.HintSize="1404,81" sap2010:WorkflowViewState.IdRef="Sequence_25">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -416,26 +434,27 @@
         </ueab:ExcelApplicationCard.Body>
       </ueab:ExcelApplicationCard>
     </Sequence>
-    <Sequence DisplayName="Toimittajarekisteri" sap:VirtualizedContainerService.HintSize="764,2212" sap2010:WorkflowViewState.IdRef="Sequence_31">
+    <Sequence DisplayName="Toimittajarekisteri" sap:VirtualizedContainerService.HintSize="1404,3760" sap2010:WorkflowViewState.IdRef="Sequence_31">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BuildDataTable DataTable="[supplierRegister]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="702,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Y-tunnus&quot; msdata:Caption=&quot;&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Nimi&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Puhelinnumero&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-      <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="702,2001" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_4" ResizeWindow="None" WorkbookPath="Data\valitut_ostolaskut.xlsx">
+      <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="1342,3649" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_4" ResizeWindow="None" WorkbookPath="Data\valitut_ostolaskut.xlsx">
         <ueab:ExcelApplicationCard.Body>
           <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="668,1732" sap2010:WorkflowViewState.IdRef="Sequence_34">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1308,3380" sap2010:WorkflowViewState.IdRef="Sequence_34">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="606,1241" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;Valitut laskut&quot;)]" SaveAfterEachRow="False">
+              <ui:BuildDataTable DataTable="[supplierRegister]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1246,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Y-tunnus&quot; msdata:Caption=&quot;&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Nimi&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Puhelinnumero&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+              <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="1246,2789" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;Valitut laskut&quot;)]" SaveAfterEachRow="False">
                 <ueab:ExcelForEachRowX.Body>
                   <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
                     <ActivityAction.Argument1>
@@ -444,13 +463,13 @@
                     <ActivityAction.Argument2>
                       <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                     </ActivityAction.Argument2>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="572,1051" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1212,2599" sap2010:WorkflowViewState.IdRef="Sequence_35">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="Assign_16">
+                      <Assign sap:VirtualizedContainerService.HintSize="1150,82" sap2010:WorkflowViewState.IdRef="Assign_16">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[businessId]</OutArgument>
                         </Assign.To>
@@ -458,7 +477,7 @@
                           <InArgument x:TypeArguments="x:String">[CurrentRow("Y-tunnus").ToString()]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="Assign_17">
+                      <Assign sap:VirtualizedContainerService.HintSize="1150,82" sap2010:WorkflowViewState.IdRef="Assign_17">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
                         </Assign.To>
@@ -466,59 +485,178 @@
                           <InArgument x:TypeArguments="x:String">[CurrentRow("Toimittaja").toString()]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <If Condition="[businessId.EndsWith(&quot;1&quot;)]" sap:VirtualizedContainerService.HintSize="510,522" sap2010:WorkflowViewState.IdRef="If_4">
-                        <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1150,2070" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                        <TryCatch.Try>
+                          <Sequence sap:VirtualizedContainerService.HintSize="1112,1842" sap2010:WorkflowViewState.IdRef="Sequence_41">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_18">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:String">[phoneNumber]</OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:String">040 123 4567</InArgument>
-                              </Assign.Value>
-                            </Assign>
+                            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: YTJ:n yritys- ja yhteisöhaku" sap:VirtualizedContainerService.HintSize="1050,1731" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" ScopeGuid="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Version="V2">
+                              <uix:NApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                  </ActivityAction.Argument>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="1016,1514" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="954,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Y-tunnus tai LEI-tunnus'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Text="[businessId]" Version="V3">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://tietopalvelu.ytj.fi/" DesignTimeRectangle="441, 557, 505, 49" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT businessIdOrLEI'" FullSelectorArgument="&lt;webctrl id='businessIdOrLEI' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='businessIdOrLEI' tag='INPUT' type='text' class='form-control' aaname='Y-tunnus tai LEI-tunnus' /&gt;" Guid="223c8c02-5fbb-46bb-b99b-2b345059ba94" InformativeScreenshot="00c6370bb41ef0109aca373b4702d933.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='YTJ:n yritys- ja yhteisöhaku' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="441, 527, 186, 24" ElementType="Text" FriendlyName="'Y-tunnus tai LEI-tunnus'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='tippable-label' aaname='' check:innerText='Y-tunnus tai LEI-tunnus' /&gt;" SearchSteps="FuzzySelector" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NTypeInto.Target>
+                                    </uix:NTypeInto>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Hae'" sap:VirtualizedContainerService.HintSize="954,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://tietopalvelu.ytj.fi/?id=1447914-7&amp;isCompanyValid=true&amp;isCompanyTerminated=false" DesignTimeRectangle="441, 882, 119, 49" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Hae'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-primary false mr-2' aaname='Hae' check:innerText='HAE' /&gt;" Guid="04ee99a3-a844-425f-80a7-4c8594620cfc" InformativeScreenshot="9b80e07233a4be1872d312b804701674.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='YTJ:n yritys- ja yhteisöhaku' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="954,90" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                                    <uix:NCheckState DisplayName="Check App State 'Näytä'" sap:VirtualizedContainerService.HintSize="954,686" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Timeout="3" Version="V3">
+                                      <uix:NCheckState.IfExists>
+                                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,467" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Näytä'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Timeout="2" Version="V3">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://tietopalvelu.ytj.fi/yritys/1447914-7" DesignTimeRectangle="713, 717, 119, 23" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Näytä'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='95' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='BUTTON' class='btn btn-secondary false btn-revealer' aaname='Näytä' check:innerText='Näytä' /&gt;" Guid="2a8db63f-926f-4ec1-96f8-a4ab0386b814" InformativeScreenshot="b7632c99bd7e0dec1c114b9c8b026e7a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Scandic Hotels Oy - YTJ:n yritys- ja yhteisöhaku' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="411, 716, 59, 24" ElementType="Text" FriendlyName="'Puhelin'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='95' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='pre' aaname='Puhelin' check:innerText='Puhelin' /&gt;" SearchSteps="FuzzySelector" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                          <uix:NGetText DisplayName="Get Text 'Puhelin'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" TextString="[phoneNumber]" Timeout="2" Version="V3">
+                                            <uix:NGetText.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://tietopalvelu.ytj.fi/yritys/1447914-7" DesignTimeRectangle="713, 716, 338, 24" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'0207664100'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='main' tableRow='95' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='main' type='' tag='DIV' class='' /&gt;" Guid="a0ba08cc-3f96-4801-825c-c391d43002e2" InformativeScreenshot="86155666c2e56b0ed60790b21d972345.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Scandic Hotels Oy - YTJ:n yritys- ja yhteisöhaku' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="411, 716, 59, 24" ElementType="Text" FriendlyName="'Puhelin'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='95' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='pre' aaname='Puhelin' check:innerText='Puhelin' /&gt;" SearchSteps="FuzzySelector" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NGetText.Target>
+                                          </uix:NGetText>
+                                        </Sequence>
+                                      </uix:NCheckState.IfExists>
+                                      <uix:NCheckState.IfNotExists>
+                                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,469" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Näytä'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Timeout="3" Version="V3">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://tietopalvelu.ytj.fi/yritys/0981105-3" DesignTimeRectangle="591, 830, 119, 23" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Näytä'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='18' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='BUTTON' class='btn btn-secondary false btn-revealer' aaname='Näytä' check:innerText='Näytä' /&gt;" Guid="e89626bd-66cb-4988-836e-7ba5ce711a5f" InformativeScreenshot="3d9ff9071cd701a8705fe3feb2739726.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='STATOGUID-1c9b7cfd-46fb-2711-dde7-8a97dd304e5f' title='Rakennuspinnoitus Rantanen Oy - YTJ:n yritys- ja yhteisöhaku' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                    <uix:Target DesignTimeRectangle="411, 829, 106, 24" ElementType="Text" FriendlyName="'Matkapuhelin'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='18' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='pre' aaname='Matkapuhelin' check:innerText='Matkapuhelin' /&gt;" SearchSteps="FuzzySelector" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                          <uix:NGetText DisplayName="Get Text 'Matkapuhelin'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" TextString="[phoneNumber]" Timeout="2" Version="V3">
+                                            <uix:NGetText.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://tietopalvelu.ytj.fi/yritys/0981105-3" DesignTimeRectangle="591, 829, 302, 24" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'040 5408977'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='main' tableRow='18' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl parentid='main' type='' tag='DIV' class='' /&gt;" Guid="dd2fb932-d77a-403f-8ee4-824fe049e580" InformativeScreenshot="d180a7d16bd6e4fa0b79ff4cc810fd54.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='STATOGUID-1c9b7cfd-46fb-2711-dde7-8a97dd304e5f' title='Rakennuspinnoitus Rantanen Oy - YTJ:n yritys- ja yhteisöhaku' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                    <uix:Target DesignTimeRectangle="411, 829, 106, 24" ElementType="Text" FriendlyName="'Matkapuhelin'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='18' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='pre' aaname='Matkapuhelin' check:innerText='Matkapuhelin' /&gt;" SearchSteps="FuzzySelector" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NGetText.Target>
+                                          </uix:NGetText>
+                                        </Sequence>
+                                      </uix:NCheckState.IfNotExists>
+                                      <uix:NCheckState.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://tietopalvelu.ytj.fi/yritys/1840913-8" DesignTimeRectangle="577, 831, 119, 23" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Näytä'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='17' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='BUTTON' class='btn btn-secondary false btn-revealer' aaname='Näytä' check:innerText='Näytä' /&gt;" Guid="9e8c46d9-786b-48ef-bb80-20def9af5c4a" InformativeScreenshot="ef9b1755b43f5f72a704b3159d6c0b53.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='STATOGUID-1c9b7cfd-46fb-2711-dde7-8a97dd304e5f' title='Lappeenrannan Konttorikone Oy - YTJ:n yritys- ja yhteisöhaku' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <uix:Target DesignTimeRectangle="411, 830, 59, 24" ElementType="Text" FriendlyName="'Puhelin'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='17' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='pre' aaname='Puhelin' check:innerText='Puhelin' /&gt;" SearchSteps="FuzzySelector" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NCheckState.Target>
+                                    </uix:NCheckState>
+                                  </Sequence>
+                                </ActivityAction>
+                              </uix:NApplicationCard.Body>
+                              <uix:NApplicationCard.TargetApp>
+                                <uix:TargetApp Area="-1928, 119, 1936, 1056" BrowserType="Edge" IconBase64="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" InformativeScreenshot="43344cf46bdee9703034dd04ca4f7531.jpg" Selector="&lt;html app='msedge.exe' title='YTJ:n yritys- ja yhteisöhaku' /&gt;" Title="Netvisor :: Pankkitilit" Url="https://tietopalvelu.ytj.fi/" />
+                              </uix:NApplicationCard.TargetApp>
+                            </uix:NApplicationCard>
                           </Sequence>
-                        </If.Then>
-                        <If.Else>
-                          <Sequence sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                        </TryCatch.Try>
+                        <TryCatch.Catches>
+                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1116,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_19">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:String">[phoneNumber]</OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:String">050 111 2222</InArgument>
-                              </Assign.Value>
-                            </Assign>
-                          </Sequence>
-                        </If.Else>
-                      </If>
-                      <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="510,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_4" MethodName="Add">
+                            <ActivityAction x:TypeArguments="s:Exception">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                              </ActivityAction.Argument>
+                              <Sequence sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_19">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[phoneNumber]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">0501112222</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </ActivityAction>
+                          </Catch>
+                        </TryCatch.Catches>
+                      </TryCatch>
+                      <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="1150,134" sap2010:WorkflowViewState.IdRef="InvokeMethod_4" MethodName="Add">
                         <InvokeMethod.TargetObject>
                           <InArgument x:TypeArguments="sd:DataRowCollection">[supplierRegister.Rows]</InArgument>
                         </InvokeMethod.TargetObject>
-                        <InArgument x:TypeArguments="s:Object[]">
-                          <VisualBasicValue x:TypeArguments="s:Object[]" ExpressionText="{}{businessId, name, phoneNumber}" />
-                        </InArgument>
+                        <InArgument x:TypeArguments="s:Object[]">[{businessId, name, phoneNumber}]</InArgument>
                       </InvokeMethod>
                     </Sequence>
                   </ActivityAction>
                 </ueab:ExcelForEachRowX.Body>
               </ueab:ExcelForEachRowX>
-              <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Toimittajarekisteri&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="606,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_4" IgnoreEmptySource="False" Source="[supplierRegister]" />
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="606,141" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Toimittajarekisteri valmis!&quot;]" />
+              <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Toimittajarekisteri&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="1246,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_4" IgnoreEmptySource="False" Source="[supplierRegister]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1246,141" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Toimittajarekisteri valmis!&quot;]" />
             </Sequence>
           </ActivityAction>
         </ueab:ExcelApplicationCard.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
       </ueab:ExcelApplicationCard>
     </Sequence>
   </Sequence>
