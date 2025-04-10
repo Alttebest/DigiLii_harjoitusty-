@@ -505,7 +505,7 @@
                                   </uix:TargetAnchorable>
                                 </uix:NTypeInto.Target>
                               </uix:NTypeInto>
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Hae'" sap:VirtualizedContainerService.HintSize="1084,157" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Version="V3">
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Hae'" sap:VirtualizedContainerService.HintSize="1084,157" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Timeout="5" Version="V3">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="https://tietopalvelu.ytj.fi/" DesignTimeRectangle="441, 999, 119, 49" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Hae'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-primary false mr-2' aaname='Hae' check:innerText='HAE' /&gt;" Guid="b2a258b5-f36b-4ab1-8e60-653676b1b03d" InformativeScreenshot="cf30ed8ee42d3f519a4ac3a530b4ca8e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='STATOGUID-11dd87f5-ebe4-72e4-cac2-513e98dd676e' title='YTJ:n yritys- ja yhteisöhaku' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                                 </uix:NClick.Target>
@@ -903,7 +903,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ueab:ExcelApplicationCard>
     </Sequence>
-    <Sequence DisplayName="Tietojen_Siirto_Netvisoriin" sap:VirtualizedContainerService.HintSize="1896,4560" sap2010:WorkflowViewState.IdRef="Sequence_65">
+    <Sequence DisplayName="Tietojen_Siirto_Netvisoriin" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_65">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
