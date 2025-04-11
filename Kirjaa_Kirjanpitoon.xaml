@@ -112,38 +112,31 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Kirjaa_Kirjanpitoon" sap:VirtualizedContainerService.HintSize="1112,7733" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Kirjaa_Kirjanpitoon" sap:VirtualizedContainerService.HintSize="1112,8251" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="testi" />
       <Variable x:TypeArguments="x:String" Name="modifiedInvoiceDate" />
       <Variable x:TypeArguments="x:String" Name="dueDate" />
+      <Variable x:TypeArguments="x:String" Name="invoiceNumber" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="1050,82" sap2010:WorkflowViewState.IdRef="Assign_4">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:Int32">[payLimit]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:Int32">1000</InArgument>
-      </Assign.Value>
-    </Assign>
-    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="1050,5865" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="Data\ostolaskudata-2023.xlsx">
+    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="1050,6505" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="Data\ostolaskudata-2023.xlsx">
       <ueab:ExcelApplicationCard.Body>
         <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="688,5596" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="688,6236" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="626,5485" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;Valitut laskut&quot;)]" SaveAfterEachRow="False">
+            <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="626,6125" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;Valitut laskut&quot;)]" SaveAfterEachRow="False">
               <ueab:ExcelForEachRowX.Body>
                 <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
                   <ActivityAction.Argument1>
@@ -152,25 +145,33 @@
                   <ActivityAction.Argument2>
                     <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                   </ActivityAction.Argument2>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,5295" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,5935" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Netvisor :: Ostolasku" sap:VirtualizedContainerService.HintSize="530,5184" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Version="V2">
+                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Netvisor :: Ostolasku" sap:VirtualizedContainerService.HintSize="530,5824" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Version="V2">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                           </ActivityAction.Argument>
-                          <Sequence sap:VirtualizedContainerService.HintSize="496,4967" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <Sequence sap:VirtualizedContainerService.HintSize="496,5607" sap2010:WorkflowViewState.IdRef="Sequence_4">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Laskun numero'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Text="[CurrentRow(&quot;Tositenro&quot;).toString()]" Version="V3">
+                            <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[invoiceNumber]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[New Random().Next(1, 10000000).ToString()]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Laskun numero'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Text="[invoiceNumber]" Version="V3">
                               <uix:NTypeInto.Target>
                                 <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/accounting/purchaseinvoice/editinvoice.aspx?page_transaction=529426" DesignTimeRectangle="714, 349, 247, 25" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT invoicenumber'" FullSelectorArgument="&lt;webctrl id='iframe_1744360596458' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='invoicenumber' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframe_1744360596458' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='invoicenumber' type='text' tag='INPUT' class='input--text width--full' aaname='' /&gt;" Guid="d3d60536-ff48-4047-ae1e-5eb7ab43b40c" InformativeScreenshot="bd3ed1a7b7d00fb86ddc30c5c07ccecd.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Ostolasku' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                                   <uix:TargetAnchorable.Anchors>
@@ -253,7 +254,7 @@
                                 </uix:TargetAnchorable>
                               </uix:NTypeInto.Target>
                             </uix:NTypeInto>
-                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Viesti'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Text="[&quot;Harjoitustyön lasku &quot; + CurrentRow(&quot;Tositenro&quot;).ToString()]" Version="V3">
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Viesti'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Text="[&quot;Laskun tositenumero:  &quot; + CurrentRow(&quot;Tositenro&quot;).ToString()]" Version="V3">
                               <uix:NTypeInto.Target>
                                 <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/accounting/purchaseinvoice/editinvoice.aspx?page_transaction=529426" DesignTimeRectangle="1150, 592, 247, 25" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT bankmessage'" FullSelectorArgument="&lt;webctrl id='iframe_1744363296836' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='bankmessage' tableRow='8' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframe_1744363296836' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='bankmessage' type='text' tag='INPUT' class='input--text width--full' aaname='' /&gt;" Guid="08045d73-e323-40f0-ae15-0cd16c84a58b" InformativeScreenshot="1fab44e181144289598a9631f2430683.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Ostolasku' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                                   <uix:TargetAnchorable.Anchors>
@@ -264,15 +265,26 @@
                                 </uix:TargetAnchorable>
                               </uix:NTypeInto.Target>
                             </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Laskun lisätieto'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Text="[&quot;Toimittajanumero: &quot; + CurrentRow(&quot;Toimittajanro&quot;).ToString() + &quot; ja Y-tunnus: &quot; +CurrentRow(&quot;Y-tunnus&quot;).ToString()]" Version="V3">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/accounting/purchaseinvoice/editinvoice.aspx?id=13&amp;page_transaction=529426" DesignTimeRectangle="539, 681, 858, 25" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT comment'" FullSelectorArgument="&lt;webctrl id='iframe_1744375065936' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='comment' tableRow='11' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframe_1744375065936' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='comment' type='text' tag='INPUT' class='input--text width--full' aaname='' /&gt;" Guid="e5c17cd0-70e0-4edf-895d-359821fe775b" InformativeScreenshot="b8c369075f7db425a325a2237c8defc7.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Ostolasku' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target DesignTimeRectangle="532, 648, 872, 28" ElementType="Text" FriendlyName="'Laskun lisätieto'" FullSelectorArgument="&lt;webctrl id='iframe_1744375065936' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='10' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframe_1744375065936' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='text__emp' aaname='Laskun lisätieto (näkyy laskuluettelossa, maks. 250 merkkiä):' check:innerText='Laskun lisätieto (näkyy laskuluettelossa, maks. 250 merkkiä):' /&gt;" SearchSteps="FuzzySelector" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
                             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Tallenna'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Version="V3">
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/accounting/purchaseinvoice/editinvoice.aspx?page_transaction=529426" DesignTimeRectangle="1344, 847, 65, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Tallenna'" FullSelectorArgument="&lt;webctrl id='iframe_1744363296836' tag='IFRAME' /&gt;&lt;webctrl id='submitButton' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframe_1744363296836' tag='IFRAME' /&gt;&lt;webctrl id='submitButton' tag='BUTTON' type='button' class='btn--success' aaname='Tallenna' check:innerText='Tallenna' /&gt;" Guid="e10aef21-0426-4825-8d39-1a9c834ef373" InformativeScreenshot="4eab2a2f63fd8a6f390ab65544942c4e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Ostolasku' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                               </uix:NClick.Target>
                             </uix:NClick>
-                            <Delay DisplayName="Odota ostolaskun tallentamisen yli" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="Delay_3" />
-                            <If Condition="[Double.Parse(CurrentRow(&quot;Summa&quot;).ToString.Replace(&quot;,&quot;, &quot;.&quot;)) &lt; payLimit]" sap:VirtualizedContainerService.HintSize="434,2345" sap2010:WorkflowViewState.IdRef="If_1">
+                            <Delay DisplayName="Odota ostolaskun tallentaminen" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                            <If Condition="[Double.Parse(CurrentRow(&quot;Summa&quot;).ToString.Replace(&quot;,&quot;, &quot;.&quot;)) &lt; payLimit]" sap:VirtualizedContainerService.HintSize="434,2605" sap2010:WorkflowViewState.IdRef="If_1">
                               <If.Then>
-                                <Sequence sap:VirtualizedContainerService.HintSize="376,1088" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                <Sequence sap:VirtualizedContainerService.HintSize="376,1218" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -311,10 +323,11 @@
                                       <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/accounting/purchaseinvoice/invoice.aspx?id=3&amp;page_transaction=529426" DesignTimeRectangle="1095, 436, 136, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Merkitse hyväksytyksi'" FullSelectorArgument="&lt;webctrl parentid='ui_content' tag='TABLE' /&gt;&lt;webctrl id='modalcommentsubmit' tableRow='1' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ui_content' tag='TABLE' /&gt;&lt;webctrl id='modalcommentsubmit' type='' tag='BUTTON' class='btn--success' aaname='Merkitse hyväksytyksi' check:innerText='Merkitse hyväksytyksi' /&gt;" Guid="b6fac459-bfde-4dd9-8578-4b471dfd3e23" InformativeScreenshot="e61c39e62308402dcf384af67454f3a3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Ostolasku' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                                     </uix:NClick.Target>
                                   </uix:NClick>
+                                  <Delay DisplayName="Odota että tiedot tallentuu" Duration="00:00:00.5000000" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Delay_7" />
                                 </Sequence>
                               </If.Then>
                               <If.Else>
-                                <Sequence sap:VirtualizedContainerService.HintSize="376,1075" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                <Sequence sap:VirtualizedContainerService.HintSize="376,1205" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -363,6 +376,7 @@
                                       <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/accounting/purchaseinvoice/purchaseinvoiceacceptanceedit.aspx?invoiceid=6&amp;page_transaction=529426" DesignTimeRectangle="1222, 847, 97, 26" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Tallenna kierto'" FullSelectorArgument="&lt;webctrl id='iframe_1744369532457' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl id='saveroute' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframe_1744369532457' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='saveroute' type='' tag='DIV' class='btn--success' aaname='Tallenna kierto' check:innerText='Tallenna kierto' /&gt;" Guid="a1a421d6-4f39-4c74-82ef-7c583ae7314c" InformativeScreenshot="c291c08f65ba19b1564b0711047e7728.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Ostolasku' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                                     </uix:NClick.Target>
                                   </uix:NClick>
+                                  <Delay DisplayName="Odota että tiedot tallentuu" Duration="00:00:00.5000000" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Delay_6" />
                                 </Sequence>
                               </If.Else>
                             </If>

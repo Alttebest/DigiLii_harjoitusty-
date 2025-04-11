@@ -134,7 +134,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Luo_Toimittajarekisteri" sap:VirtualizedContainerService.HintSize="512,647" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence DisplayName="Luo_Toimittajarekisteri" sap:VirtualizedContainerService.HintSize="1496,6095" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="startDay" />
       <Variable x:TypeArguments="x:String" Name="payLimitStr" />
@@ -162,7 +162,7 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Kysy_Tietoja" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="Kysy_Tietoja" sap:VirtualizedContainerService.HintSize="1434,81" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -349,7 +349,7 @@
         </ui:InterruptibleDoWhile>
       </Sequence>
     </Sequence>
-    <Sequence DisplayName="Lue_Data" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_25">
+    <Sequence DisplayName="Lue_Data" sap:VirtualizedContainerService.HintSize="1434,81" sap2010:WorkflowViewState.IdRef="Sequence_25">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -429,10 +429,10 @@
         </sap:WorkflowViewStateService.ViewState>
       </ueab:ExcelApplicationCard>
     </Sequence>
-    <Sequence DisplayName="Toimittajarekisteri_Data_Taulukko" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_31">
+    <Sequence DisplayName="Toimittajarekisteri_Data_Taulukko" sap:VirtualizedContainerService.HintSize="1434,5529" sap2010:WorkflowViewState.IdRef="Sequence_31">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -512,7 +512,7 @@
                               </uix:NClick>
                               <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1084,1327" sap2010:WorkflowViewState.IdRef="TryCatch_5">
                                 <TryCatch.Try>
-                                  <uix:NCheckState DisplayName="Check App State 'Käyntiosoite'" sap:VirtualizedContainerService.HintSize="1046,1099" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Timeout="1" Version="V3">
+                                  <uix:NCheckState DisplayName="Check App State 'Käyntiosoite'" sap:VirtualizedContainerService.HintSize="1046,1099" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Timeout="2" Version="V3">
                                     <uix:NCheckState.IfExists>
                                       <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,882" sap2010:WorkflowViewState.IdRef="Sequence_55">
                                         <sap:WorkflowViewStateService.ViewState>
@@ -688,7 +688,7 @@
                               </TryCatch>
                               <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1084,914" sap2010:WorkflowViewState.IdRef="TryCatch_6">
                                 <TryCatch.Try>
-                                  <uix:NCheckState DisplayName="Check App State 'Puhelin'" sap:VirtualizedContainerService.HintSize="954,686" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Timeout="1" Version="V3">
+                                  <uix:NCheckState DisplayName="Check App State 'Puhelin'" sap:VirtualizedContainerService.HintSize="954,686" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Timeout="2" Version="V3">
                                     <uix:NCheckState.IfExists>
                                       <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,469" sap2010:WorkflowViewState.IdRef="Sequence_57">
                                         <sap:WorkflowViewStateService.ViewState>
@@ -696,7 +696,7 @@
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Näytä'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Timeout="2" Version="V3">
+                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Näytä'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Timeout="3" Version="V3">
                                           <uix:NClick.Target>
                                             <uix:TargetAnchorable BrowserURL="https://tietopalvelu.ytj.fi/yritys/1447914-7" DesignTimeRectangle="713, 717, 119, 23" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Näytä'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='95' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='BUTTON' class='btn btn-secondary false btn-revealer' aaname='Näytä' check:innerText='Näytä' /&gt;" Guid="2a8db63f-926f-4ec1-96f8-a4ab0386b814" InformativeScreenshot="b7632c99bd7e0dec1c114b9c8b026e7a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Scandic Hotels Oy - YTJ:n yritys- ja yhteisöhaku' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                                               <uix:TargetAnchorable.Anchors>
@@ -727,7 +727,7 @@
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Näytä'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Timeout="2" Version="V3">
+                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Näytä'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Timeout="3" Version="V3">
                                           <uix:NClick.Target>
                                             <uix:TargetAnchorable BrowserURL="https://tietopalvelu.ytj.fi/yritys/0981105-3" DesignTimeRectangle="591, 830, 119, 23" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Näytä'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='18' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='BUTTON' class='btn btn-secondary false btn-revealer' aaname='Näytä' check:innerText='Näytä' /&gt;" Guid="e89626bd-66cb-4988-836e-7ba5ce711a5f" InformativeScreenshot="3d9ff9071cd701a8705fe3feb2739726.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='STATOGUID-1c9b7cfd-46fb-2711-dde7-8a97dd304e5f' title='Rakennuspinnoitus Rantanen Oy - YTJ:n yritys- ja yhteisöhaku' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                                               <uix:TargetAnchorable.Anchors>
@@ -909,26 +909,26 @@
         </sap:WorkflowViewStateService.ViewState>
       </ueab:ExcelApplicationCard>
     </Sequence>
-    <Sequence DisplayName="Tietojen_Siirto_Netvisoriin" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_65">
+    <Sequence DisplayName="Tietojen_Siirto_Netvisoriin" sap:VirtualizedContainerService.HintSize="1434,81" sap2010:WorkflowViewState.IdRef="Sequence_65">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[supplierRegister]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1834,4449" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[supplierRegister]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1834,4409" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1800,4263" sap2010:WorkflowViewState.IdRef="Sequence_70">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1800,4223" sap2010:WorkflowViewState.IdRef="Sequence_70">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Netvisor :: Toimittajalistaus" sap:VirtualizedContainerService.HintSize="1758,4175" sap2010:WorkflowViewState.IdRef="NApplicationCard_10" InteractionMode="DebuggerApi" ScopeGuid="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Version="V2">
+              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Netvisor :: Toimittajalistaus" sap:VirtualizedContainerService.HintSize="1758,4135" sap2010:WorkflowViewState.IdRef="NApplicationCard_10" InteractionMode="DebuggerApi" ScopeGuid="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Version="V2">
                 <uix:NApplicationCard.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
@@ -945,7 +945,7 @@
                           <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/accounting/distributer/distributerlist.aspx?page_transaction=529426" DesignTimeRectangle="32, 364, 474, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT 3b960b56cf009d83d…'" FullSelectorArgument="&lt;webctrl parentid='ui_content' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ui_content' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='advanced-search-form__primary-search-field input--text' aaname='' /&gt;" Guid="d8fb39cc-bff8-4864-9949-4ac65dd7a8f1" InformativeScreenshot="308fdbc15ef669a0f08f40f870106623.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Toimittajalistaus' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                         </uix:NTypeInto.Target>
                       </uix:NTypeInto>
-                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Hae'" sap:VirtualizedContainerService.HintSize="1662,157" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Timeout="3" Version="V3">
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="1" DisplayName="Click 'Hae'" sap:VirtualizedContainerService.HintSize="1662,157" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Timeout="3" Version="V3">
                         <uix:NClick.Target>
                           <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/accounting/distributer/distributerlist.aspx?page_transaction=529426" DesignTimeRectangle="545, 364, 42, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Hae'" FullSelectorArgument="&lt;webctrl parentid='ui_content' tag='TABLE' /&gt;&lt;webctrl aaname='Hae' tableRow='1' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ui_content' tag='TABLE' /&gt;&lt;webctrl aaname='Hae' type='button' tag='BUTTON' class='btn--neutral btn--flat add-beat--left--half' check:innerText='Hae' /&gt;" Guid="0a006818-65c3-4815-bd50-9a45ec5c1b1d" InformativeScreenshot="f9262f1064c97d7e6e34c850878023f0.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Toimittajalistaus' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                         </uix:NClick.Target>
@@ -970,9 +970,15 @@
                                 </uix:TargetAnchorable>
                               </uix:NClick.Target>
                             </uix:NClick>
-                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Pankkitilien hallintaan'" sap:VirtualizedContainerService.HintSize="1000,157" sap2010:WorkflowViewState.IdRef="NClick_26" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Timeout="3" Version="V3">
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="1" DisplayName="Click 'Pankkitilien hallintaan'" sap:VirtualizedContainerService.HintSize="1000,157" sap2010:WorkflowViewState.IdRef="NClick_26" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Timeout="3" Version="V3">
                               <uix:NClick.Target>
-                                <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/tableui/taloushallinto/ostoreskontra/partner.asp?id=16&amp;page_transaction=529426" DesignTimeRectangle="47, 816, 170, 12" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Toimittajan pankkitilien'" FullSelectorArgument="&lt;webctrl id='distributerinfo' tableRow='4' tag='TABLE' /&gt;&lt;webctrl tableRow='22' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='distributerinfo' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='Toimittajan pankkitilien hallintaan' check:innerText='Toimittajan pankkitilien hallintaan' /&gt;" Guid="89f1b572-e533-4c79-b13c-5cdb5087c5ad" InformativeScreenshot="650bb1f51a7191ddba3400eb0847f1ae.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Toimittaja' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                                <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/tableui/taloushallinto/ostoreskontra/partner.asp?id=52&amp;page_transaction=529426" DesignTimeRectangle="47, 816, 170, 12" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Toimittajan pankkitilien'" FullSelectorArgument="&lt;webctrl id='distributerinfo' tableRow='4' tag='TABLE' /&gt;&lt;webctrl tableRow='22' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='distributerinfo' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='Toimittajan pankkitilien hallintaan' check:innerText='Toimittajan pankkitilien hallintaan' /&gt;" Guid="221fa29f-9559-4e90-bf67-f3b8acc2e61d" InformativeScreenshot="5bba4c30491d6a8eded7dbe9d8c78fb7.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Toimittaja' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target DesignTimeRectangle="51, 794, 103, 15" FriendlyName="'Muut toiminnot'" FullSelectorArgument="&lt;webctrl id='distributerinfo' tableRow='4' tag='TABLE' /&gt;&lt;webctrl tableRow='21' tag='B' /&gt;" FuzzySelectorArgument="&lt;webctrl id='distributerinfo' tag='TABLE' /&gt;&lt;webctrl type='' tag='B' class='' aaname='Muut toiminnot' check:innerText='Muut toiminnot' /&gt;" SearchSteps="FuzzySelector" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
                               </uix:NClick.Target>
                             </uix:NClick>
                             <uix:NCheckState DisplayName="Check App State 'Tilinumero'" sap:VirtualizedContainerService.HintSize="1000,2077" sap2010:WorkflowViewState.IdRef="NCheckState_9" ScopeIdentifier="b2d9dbe0-980b-424c-8cbd-ec27ccc697f3" Timeout="2" Version="V3">
@@ -1220,13 +1226,7 @@
                           </Sequence>
                         </uix:NCheckState.IfNotExists>
                         <uix:NCheckState.Target>
-                          <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/accounting/distributer/distributerlist.aspx?page_transaction=529426" DesignTimeRectangle="800, 549, 100, 32" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'0162017-2'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl class='width__px--small' tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='width__px--small' type='' tag='TD' aaname='0162017-2' /&gt;" Guid="3620b423-6bd8-4e13-ac15-716afe1eacdb" ImageBase64="" InformativeScreenshot="32d4981c38756bd8253b0b352742892a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Toimittajalistaus' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
-                            <uix:TargetAnchorable.Anchors>
-                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                <uix:Target DesignTimeRectangle="805, 525, 92, 18" ElementType="Text" FriendlyName="'Y-tunnus'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl aaname='Y-tunnus' tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Y-tunnus' type='' tag='A' class='' check:innerText='Y-tunnus' /&gt;" SearchSteps="FuzzySelector" />
-                              </scg:List>
-                            </uix:TargetAnchorable.Anchors>
-                          </uix:TargetAnchorable>
+                          <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/accounting/distributer/distributerlist.aspx?page_transaction=529426" DesignTimeRectangle="1883, 554, 23, 22" DesignTimeScaleFactor="1" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div' tableRow='3' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='btn--mini btn--info button-dropdown' tag='DIV' aaname='' /&gt;" Guid="a20be1eb-9d17-4074-b37c-62f68434236b" InformativeScreenshot="bc26814bca97e3b5436d22ee4678da5d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Toimittajalistaus' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                         </uix:NCheckState.Target>
                       </uix:NCheckState>
                     </Sequence>
@@ -1247,7 +1247,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="LogMessage_10" Message="[&quot;Toimittajarekisterin päivitys Netvisorissa suoritettu!&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1434,52" sap2010:WorkflowViewState.IdRef="LogMessage_10" Message="[&quot;Toimittajarekisterin päivitys Netvisorissa suoritettu!&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
