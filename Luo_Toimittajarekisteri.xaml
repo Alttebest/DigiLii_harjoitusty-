@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1884,1001</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1884,761</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Luo_Toimittajarekisteri_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -138,7 +138,6 @@
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="startDay" />
       <Variable x:TypeArguments="x:String" Name="payLimitStr" />
-      <Variable x:TypeArguments="x:Int32" Name="payLimit" />
       <Variable x:TypeArguments="s:DateTime" Name="startDayDate" />
       <Variable x:TypeArguments="x:Boolean" Name="validDate" />
       <Variable x:TypeArguments="x:Boolean" Name="validSum" />
@@ -160,6 +159,7 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Sequence DisplayName="Kysy_Tietoja" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_4">
@@ -293,7 +293,7 @@
                         <OutArgument x:TypeArguments="x:Boolean">[validSum]</OutArgument>
                       </Assign.To>
                       <Assign.Value>
-                        <InArgument x:TypeArguments="x:Boolean">[Integer.TryParse(payLimitStr, payLimit)]</InArgument>
+                        <InArgument x:TypeArguments="x:Boolean">[Integer.TryParse(payLimitStr, GlobalVariablesNamespace.GlobalVariables.payLimit)]</InArgument>
                       </Assign.Value>
                     </Assign>
                     <If Condition="[Not validSum]" sap:VirtualizedContainerService.HintSize="510,769" sap2010:WorkflowViewState.IdRef="If_2">
@@ -324,7 +324,7 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_6">
                             <Assign.To>
-                              <OutArgument x:TypeArguments="x:Int32">[payLimit]</OutArgument>
+                              <OutArgument x:TypeArguments="x:Int32">[GlobalVariablesNamespace.GlobalVariables.payLimit]</OutArgument>
                             </Assign.To>
                             <Assign.Value>
                               <InArgument x:TypeArguments="x:Int32">[CInt(payLimitStr)]</InArgument>
@@ -891,6 +891,12 @@
                     </Sequence>
                   </ActivityAction>
                 </ueab:ExcelForEachRowX.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
               </ueab:ExcelForEachRowX>
             </Sequence>
           </ActivityAction>
@@ -957,7 +963,7 @@
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/accounting/distributer/distributerlist.aspx?page_transaction=529426" DesignTimeRectangle="213, 558, 148, 12" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'SAIMAAN TUKIPALVELUT OY'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='SAIMAAN TUKIPALVELUT OY' /&gt;" Guid="04839b7e-b2f5-4dea-8557-9c04777b2edb" ImageBase64="" InformativeScreenshot="756ba42745636bbf5e3095874f345411.png" NativeTextArgument="[CurrentRow(&quot;Nimi&quot;).ToString()]" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Toimittajalistaus' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Visible">
                                   <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                       <uix:Target DesignTimeRectangle="212, 525, 493, 18" ElementType="Text" FriendlyName="'Nimi'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl aaname='Nimi' tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Nimi' type='' tag='A' class='' check:innerText='Nimi' /&gt;" SearchSteps="FuzzySelector" />
                                     </scg:List>
                                   </uix:TargetAnchorable.Anchors>
@@ -1077,7 +1083,7 @@
                               <uix:NCheckState.Target>
                                 <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi//evo/accounting/distributer/bankaccount/listbankaccounts.aspx?distributerid=20&amp;page_transaction=529426" DesignTimeRectangle="223, 407, 200, 28" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'FI21 4233 7782 0008 51'" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' tag='TD' class='min-width__px--large' aaname='FI21 4233 7782 0008 51' /&gt;" Guid="f8a47877-b183-4f75-ad60-7def76cfb5dd" ImageBase64="" InformativeScreenshot="937b5579c3b314a1f2c2f73408744bf4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Toimittajan pankkitilit' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                                   <uix:TargetAnchorable.Anchors>
-                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                       <uix:Target DesignTimeRectangle="223, 380, 200, 28" ElementType="Text" FriendlyName="'Tilinumero'" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='bold bgdarkgray min-width__px--large' tag='TD' aaname='Tilinumero' check:innerText='Tilinumero' /&gt;" SearchSteps="FuzzySelector" />
                                     </scg:List>
                                   </uix:TargetAnchorable.Anchors>
@@ -1216,7 +1222,7 @@
                         <uix:NCheckState.Target>
                           <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/accounting/distributer/distributerlist.aspx?page_transaction=529426" DesignTimeRectangle="800, 549, 100, 32" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'0162017-2'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl class='width__px--small' tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='width__px--small' type='' tag='TD' aaname='0162017-2' /&gt;" Guid="3620b423-6bd8-4e13-ac15-716afe1eacdb" ImageBase64="" InformativeScreenshot="32d4981c38756bd8253b0b352742892a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Toimittajalistaus' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
-                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                 <uix:Target DesignTimeRectangle="805, 525, 92, 18" ElementType="Text" FriendlyName="'Y-tunnus'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl aaname='Y-tunnus' tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Y-tunnus' type='' tag='A' class='' check:innerText='Y-tunnus' /&gt;" SearchSteps="FuzzySelector" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
