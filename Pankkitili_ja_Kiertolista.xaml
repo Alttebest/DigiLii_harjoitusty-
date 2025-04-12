@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Avaa_Pankkitili" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="643,2137" sap2010:WorkflowViewState.IdRef="Avaa_Pankkitili_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Avaa_Pankkitili" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="893,3863" sap2010:WorkflowViewState.IdRef="Avaa_Pankkitili_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -31,6 +31,12 @@
       <x:String>UiPath.UIAutomationNext.Activities</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -83,9 +89,14 @@
       <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Avaa_Pankkitili" sap:VirtualizedContainerService.HintSize="568,2072" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Avaa_Pankkitili" sap:VirtualizedContainerService.HintSize="568,3798" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -128,7 +139,7 @@
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/admin/banking/bankaccounts.aspx#/bank-account/77165fb8-a3ba-412d-8708-e70b38c3071d" DesignTimeRectangle="1007, 686, 296, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;aside&amp;gt;section&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' parentid='bookkeeping_account' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='select__input-container css-19bb58m' parentid='bookkeeping_account' tag='DIV' aaname='' /&gt;" Guid="b0558fba-394c-4db4-bf68-f561700bb175" InformativeScreenshot="daefbae0e9957ad0165d5e40eeb90985.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Pankkitilit' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target DesignTimeRectangle="996, 662, 81, 18" ElementType="Text" FriendlyName="'Kirjanpidon tili'" FullSelectorArgument="&lt;webctrl aaname='Kirjanpidon tili' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Kirjanpidon tili' tag='SPAN' type='' class='sc-jlZhew OoaxX' check:innerText='Kirjanpidon tili' /&gt;" SearchSteps="FuzzySelector" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
@@ -164,6 +175,98 @@
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
         <uix:TargetApp Area="10, 87, 1384, 1193" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFwSURBVDhPvZExT8JAFMcfnSQuavwM+gn8GCYsakiUEqiDbhCjyASjkQW1JKKWqIkkLDoygqQDjTFpVDS0SCo9CDpolFgmz/SKQo8BJv7Jf7n3/r+7ew9gZMLYwSE17kNPs3RpKHFIOeKQgjmkZOnaQHGo7O6Eif111UX3dBV/DwLfvgTeWIUUHjOPOKRe2ABIrQZqNScdBdiWdiHWvAW+jTt+gYSx7EcK3wsgEF0J9IfDEoZoKdcDIJ5KfxbmteeS/RVK2RysFV6/CsGWWISwZBDvfdVpiENs5ifua8VFrdLoQH7WNG0SwH04DayAiX1nDdgsFCD6kKcBkPx+Y2S9xci6MX6nS3OVasi6PRJhgBWUf4hpLv0IO3WRhjiuX3OMrGNG1mO274MnFbQBLO/DgbFCBvkHyHzc9IdNLWScwApVCnBOauYqzZWaqz1ubdDRrrwplw3gEZbolsHyClkrfJKkS8PJczoDrJAggx2VfgGSHh1FGO1/EgAAAABJRU5ErkJggg==" InformativeScreenshot="e1e4c9dcecbd8a1c35fc23df9903067e.jpg" Selector="&lt;html app='msedge.exe' title='Netvisor :: Pankkitilit' /&gt;" Title="Netvisor :: Pankkitilit" Url="https://koulutus.netvisor.fi/evo/admin/banking/bankaccounts.aspx#/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Netvisor :: Ostolaskujen kiertolistat" sap:VirtualizedContainerService.HintSize="506,1686" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="9b6a2fcb-2afb-4862-b6b7-13d801a32736" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="472,1429" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="KiertolistaOlemassa" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckElement DelayBefore="0" DisplayName="Check Element 'Evaattori Excel'" sap:VirtualizedContainerService.HintSize="410,157" sap2010:WorkflowViewState.IdRef="NCheckElement_3" Result="[KiertolistaOlemassa]" ScopeIdentifier="9b6a2fcb-2afb-4862-b6b7-13d801a32736" Version="V3">
+              <uix:NCheckElement.Target>
+                <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/accounting/purchaseinvoice/purchaseinvoiceacceptancemanage.aspx?page_transaction=529426" DesignTimeRectangle="416, 417, 202, 32" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Evaattori Excel'" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableCol='4' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' class='min-width__px--small wrap--nowrap' tag='TD' aaname='Evaattori Excel' check:innerText='Evaattori Excel' /&gt;" Guid="c48f5d89-b69c-4bdd-a502-942daa3d0b33" InformativeScreenshot="838c637a169328ddcdd29164decf95fc.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Ostolaskujen kiertolistat' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="416, 389, 202, 28" ElementType="Text" FriendlyName="'Hyväksyjä'" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableCol='4' tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='bold bgdarkgray min-width__px--small wrap--nowrap' tag='TD' aaname='Hyväksyjä' check:innerText='Hyväksyjä' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckElement.Target>
+            </uix:NCheckElement>
+            <If Condition="[not KiertolistaOlemassa]" sap:VirtualizedContainerService.HintSize="410,1117" sap2010:WorkflowViewState.IdRef="If_4">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,935" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Luo uusi kiertolista'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9b6a2fcb-2afb-4862-b6b7-13d801a32736" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/accounting/purchaseinvoice/purchaseinvoiceacceptancemanage.aspx?page_transaction=529426" DesignTimeRectangle="1123, 301, 119, 26" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Luo uusi kiertolista'" FullSelectorArgument="&lt;webctrl parentid='ui_content' tag='TABLE' /&gt;&lt;webctrl id='newroute' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ui_content' tag='TABLE' /&gt;&lt;webctrl id='newroute' type='' tag='DIV' class='btn--neutral pull--right add-beat--top--quarter' aaname='Luo uusi kiertolista' check:innerText='Luo uusi kiertolista' /&gt;" Guid="7415f959-106e-43df-8854-67acc0d611df" InformativeScreenshot="59d43383f26a595c50bec4a2bca92d93.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Ostolaskujen kiertolistat' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'INPUT  acceptancename'" sap:VirtualizedContainerService.HintSize="334,155" sap2010:WorkflowViewState.IdRef="SetValue_1" Text="Harjoitustyön kiertolista">
+                    <ui:SetValue.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ef8991f0-e713-467a-9d63-3aa6e99481a1" InformativeScreenshot="aff9ceeefbf8826da8af4eb48701c4c3" Selector="&lt;webctrl id='iframe_1744488691871' tag='IFRAME' /&gt;&lt;webctrl id='acceptancename' tag='INPUT' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:SetValue.Target>
+                  </ui:SetValue>
+                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts 'Laskun asiatarkastajat'" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" ScopeIdentifier="9b6a2fcb-2afb-4862-b6b7-13d801a32736" Shortcuts="[d(hk)][k(Down)][u(hk)][d(hk)][k(Down)][u(hk)][d(hk)][k(Down)][u(hk)][d(hk)][k(Down)][u(hk)][d(hk)][k(enter)][u(hk)]" Version="V3">
+                    <uix:NKeyboardShortcuts.Target>
+                      <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/accounting/purchaseinvoice/purchaseinvoiceacceptanceedit.aspx?distributerid=0&amp;page_transaction=529426" DesignTimeRectangle="294, 610, 324, 23" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'- Lisää henkilö -'" FullSelectorArgument="&lt;webctrl id='iframe_1744488691871' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='contentsupervisoruseridlist' tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframe_1744488691871' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='contentsupervisoruseridlist' type='' tag='SELECT' class='input--select width--full' aaname='' /&gt;" Guid="5740de99-d158-41cd-9c8a-a3653e10cdac" InformativeScreenshot="bf425a98f2c6166790f193055ab23776.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Ostolaskujen kiertolistat' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target DesignTimeRectangle="294, 584, 324, 18" ElementType="Text" FriendlyName="'Laskun asiatarkastajat'" FullSelectorArgument="&lt;webctrl id='iframe_1744488691871' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframe_1744488691871' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='H2' class='gamma add-beat--half' aaname='Laskun asiatarkastajat' check:innerText='Laskun asiatarkastajat' /&gt;" SearchSteps="FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NKeyboardShortcuts.Target>
+                  </uix:NKeyboardShortcuts>
+                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts 'Laskun hyväksyjä'" sap:VirtualizedContainerService.HintSize="334,199" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" ScopeIdentifier="9b6a2fcb-2afb-4862-b6b7-13d801a32736" Shortcuts="[d(hk)][k(Down)][u(hk)][d(hk)][k(Enter)][u(hk)]" Version="V3">
+                    <uix:NKeyboardShortcuts.Target>
+                      <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/accounting/purchaseinvoice/purchaseinvoiceacceptanceedit.aspx?distributerid=0&amp;page_transaction=529426" DesignTimeRectangle="655, 610, 324, 23" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'Evaattori Excel'" FullSelectorArgument="&lt;webctrl id='iframe_1744488691871' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='acceptoruserid' tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframe_1744488691871' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='acceptoruserid' type='' tag='SELECT' class='input--select width--full' aaname='' /&gt;" Guid="26b0963c-1f21-4c6b-8195-81ac21da080c" InformativeScreenshot="1de4129707ed4e1eb83e46617daceba0.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Ostolaskujen kiertolistat' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target DesignTimeRectangle="655, 584, 324, 18" ElementType="Text" FriendlyName="'Laskun hyväksyjä'" FullSelectorArgument="&lt;webctrl id='iframe_1744488691871' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='1' tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframe_1744488691871' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='gamma add-beat--half' tag='H2' aaname='Laskun hyväksyjä' check:innerText='Laskun hyväksyjä' /&gt;" SearchSteps="FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NKeyboardShortcuts.Target>
+                  </uix:NKeyboardShortcuts>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-7, 0, 1273, 1447" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFwSURBVDhPvZExT8JAFMcfnSQuavwM+gn8GCYsakiUEqiDbhCjyASjkQW1JKKWqIkkLDoygqQDjTFpVDS0SCo9CDpolFgmz/SKQo8BJv7Jf7n3/r+7ew9gZMLYwSE17kNPs3RpKHFIOeKQgjmkZOnaQHGo7O6Eif111UX3dBV/DwLfvgTeWIUUHjOPOKRe2ABIrQZqNScdBdiWdiHWvAW+jTt+gYSx7EcK3wsgEF0J9IfDEoZoKdcDIJ5KfxbmteeS/RVK2RysFV6/CsGWWISwZBDvfdVpiENs5ifua8VFrdLoQH7WNG0SwH04DayAiX1nDdgsFCD6kKcBkPx+Y2S9xci6MX6nS3OVasi6PRJhgBWUf4hpLv0IO3WRhjiuX3OMrGNG1mO274MnFbQBLO/DgbFCBvkHyHzc9IdNLWScwApVCnBOauYqzZWaqz1ubdDRrrwplw3gEZbolsHyClkrfJKkS8PJczoDrJAggx2VfgGSHh1FGO1/EgAAAABJRU5ErkJggg==" InformativeScreenshot="81465c2e4a49527534bfba68057737a2.jpg" Selector="&lt;html app='msedge.exe' title='Netvisor :: Ostolaskujen kiertolistat' /&gt;" Title="Netvisor :: Ostolaskujen kiertolistat" Url="https://koulutus.netvisor.fi/evo/accounting/purchaseinvoice/purchaseinvoiceacceptancemanage.aspx?page_transaction=529426" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>
