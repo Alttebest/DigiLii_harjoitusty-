@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Avaa_Pankkitili" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="893,3863" sap2010:WorkflowViewState.IdRef="Avaa_Pankkitili_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Avaa_Pankkitili" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="893,4289" sap2010:WorkflowViewState.IdRef="Avaa_Pankkitili_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -96,7 +96,7 @@
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Avaa_Pankkitili" sap:VirtualizedContainerService.HintSize="568,3798" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Avaa_Pankkitili" sap:VirtualizedContainerService.HintSize="568,4224" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -177,13 +177,13 @@
         <uix:TargetApp Area="10, 87, 1384, 1193" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFwSURBVDhPvZExT8JAFMcfnSQuavwM+gn8GCYsakiUEqiDbhCjyASjkQW1JKKWqIkkLDoygqQDjTFpVDS0SCo9CDpolFgmz/SKQo8BJv7Jf7n3/r+7ew9gZMLYwSE17kNPs3RpKHFIOeKQgjmkZOnaQHGo7O6Eif111UX3dBV/DwLfvgTeWIUUHjOPOKRe2ABIrQZqNScdBdiWdiHWvAW+jTt+gYSx7EcK3wsgEF0J9IfDEoZoKdcDIJ5KfxbmteeS/RVK2RysFV6/CsGWWISwZBDvfdVpiENs5ifua8VFrdLoQH7WNG0SwH04DayAiX1nDdgsFCD6kKcBkPx+Y2S9xci6MX6nS3OVasi6PRJhgBWUf4hpLv0IO3WRhjiuX3OMrGNG1mO274MnFbQBLO/DgbFCBvkHyHzc9IdNLWScwApVCnBOauYqzZWaqz1ubdDRrrwplw3gEZbolsHyClkrfJKkS8PJczoDrJAggx2VfgGSHh1FGO1/EgAAAABJRU5ErkJggg==" InformativeScreenshot="e1e4c9dcecbd8a1c35fc23df9903067e.jpg" Selector="&lt;html app='msedge.exe' title='Netvisor :: Pankkitilit' /&gt;" Title="Netvisor :: Pankkitilit" Url="https://koulutus.netvisor.fi/evo/admin/banking/bankaccounts.aspx#/" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Netvisor :: Ostolaskujen kiertolistat" sap:VirtualizedContainerService.HintSize="506,1686" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="9b6a2fcb-2afb-4862-b6b7-13d801a32736" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Netvisor :: Ostolaskujen kiertolistat" sap:VirtualizedContainerService.HintSize="506,2112" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="9b6a2fcb-2afb-4862-b6b7-13d801a32736" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="472,1429" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="472,1855" sap2010:WorkflowViewState.IdRef="Sequence_8">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="KiertolistaOlemassa" />
             </Sequence.Variables>
@@ -203,9 +203,9 @@
                 </uix:TargetAnchorable>
               </uix:NCheckElement.Target>
             </uix:NCheckElement>
-            <If Condition="[not KiertolistaOlemassa]" sap:VirtualizedContainerService.HintSize="410,1117" sap2010:WorkflowViewState.IdRef="If_4">
+            <If Condition="[not KiertolistaOlemassa]" sap:VirtualizedContainerService.HintSize="410,1545" sap2010:WorkflowViewState.IdRef="If_4">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="376,935" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <Sequence sap:VirtualizedContainerService.HintSize="376,1132" sap2010:WorkflowViewState.IdRef="Sequence_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -250,15 +250,21 @@
                       </uix:TargetAnchorable>
                     </uix:NKeyboardShortcuts.Target>
                   </uix:NKeyboardShortcuts>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Tallenna kierto'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9b6a2fcb-2afb-4862-b6b7-13d801a32736" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/accounting/purchaseinvoice/purchaseinvoiceacceptanceedit.aspx?distributerid=0&amp;page_transaction=529426" DesignTimeRectangle="890, 1019, 97, 26" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Tallenna kierto'" FullSelectorArgument="&lt;webctrl id='iframe_1744488691871' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl id='saveroute' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='iframe_1744488691871' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='saveroute' type='' tag='DIV' class='btn--success' aaname='Tallenna kierto' check:innerText='Tallenna kierto' /&gt;" Guid="7e1e42ee-e956-4e46-85f3-0a2104b08eea" InformativeScreenshot="93ba9b187e42ca729c5b77ff7aaa1d33.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor :: Ostolaskujen kiertolistat' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <Sequence sap:VirtualizedContainerService.HintSize="376,231" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Kiertolista oli jo olemassa&quot;]" />
                 </Sequence>
               </If.Else>
             </If>
