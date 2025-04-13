@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Luo_Excel" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="678,4646" sap2010:WorkflowViewState.IdRef="Luo_Excel_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Luo_Excel" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_laskuTaulu" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>873.3333333333334,4036.6666666666665</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Luo_Excel_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -30,6 +38,10 @@
       <x:String>UiPath.Excel.Model</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -78,96 +90,107 @@
       <AssemblyReference>System.IO.Packaging</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Luo_Excel" sap:VirtualizedContainerService.HintSize="688,4581.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Luo_Excel" sap:VirtualizedContainerService.HintSize="688,3972" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[Directory.Exists(Directory.GetCurrentDirectory + &quot;\Laskut yhteenveto&quot;)]" DisplayName="If - Tarkista kansio" sap:VirtualizedContainerService.HintSize="626,1060" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[Directory.Exists(Directory.GetCurrentDirectory + &quot;\Laskut yhteenveto&quot;)]" DisplayName="If - Tarkista kansio" sap:VirtualizedContainerService.HintSize="626,1065.3333333333333" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="376,230.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence sap:VirtualizedContainerService.HintSize="376,232" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Kansio löydetty: Laskut yhteenveto&quot;]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Kansio löydetty: Laskut yhteenveto&quot;]" />
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="492,646" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence sap:VirtualizedContainerService.HintSize="492,649.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Luo kansio" sap:VirtualizedContainerService.HintSize="450,558.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Luo kansio" sap:VirtualizedContainerService.HintSize="450,562" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Luodaan kansio: Laskut yhteenveto&quot;]" />
-            <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="388,81.33333333333333" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="[Directory.GetCurrentDirectory + &quot;\Laskut yhteenveto&quot;]" />
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Kansio luotu: Laskut yhteenveto&quot;]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Luodaan kansio: Laskut yhteenveto&quot;]" />
+            <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="388,82" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="[Directory.GetCurrentDirectory + &quot;\Laskut yhteenveto&quot;]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Kansio luotu: Laskut yhteenveto&quot;]" />
           </Sequence>
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[File.Exists(Directory.GetCurrentDirectory + &quot;\Laskut yhteenveto\LaskutYhteenveto-&quot; + DateTime.Now.ToString(&quot;yyyy.MM.dd&quot;) + &quot;.xlsx&quot;)]" sap:VirtualizedContainerService.HintSize="626,352" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[File.Exists(Directory.GetCurrentDirectory + &quot;\Laskut yhteenveto\LaskutYhteenveto-&quot; + DateTime.Now.ToString(&quot;yyyy.MM.dd&quot;) + &quot;.xlsx&quot;)]" sap:VirtualizedContainerService.HintSize="626,353.3333333333333" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="376,168.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence sap:VirtualizedContainerService.HintSize="376,169.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="334,81.33333333333333" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[Directory.GetCurrentDirectory + &quot;\Laskut yhteenveto\LaskutYhteenveto-&quot; + DateTime.Now.ToString(&quot;yyyy.MM.dd&quot;) + &quot;.xlsx&quot;]" />
+          <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="334,82" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[Directory.GetCurrentDirectory + &quot;\Laskut yhteenveto\LaskutYhteenveto-&quot; + DateTime.Now.ToString(&quot;yyyy.MM.dd&quot;) + &quot;.xlsx&quot;]" />
         </Sequence>
       </If.Then>
       <If.Else>
         <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7" />
       </If.Else>
     </If>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="626,2978.6666666666665" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="626,2362.6666666666665" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,2891.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,2275.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_8">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="530,143.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Luodaan tiedosto: LaskutYhteenveto-&quot; + DateTime.Now.toString(&quot;yyyy.MM.dd&quot;) + &quot;.xlsx&quot;]" />
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="530,2597.3333333333335" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" TemplatePath="\Laskut yhteenveto\LaskutYhteenveto-0000.00.00.xlsx" UseTemplate="True" WorkbookPath="[Directory.GetCurrentDirectory + &quot;\Laskut yhteenveto\LaskutYhteenveto-&quot; + DateTime.Now.ToString(&quot;yyyy.MM.dd&quot;) + &quot;.xlsx&quot;]">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="530,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Luodaan tiedosto: LaskutYhteenveto-&quot; + DateTime.Now.toString(&quot;yyyy.MM.dd&quot;) + &quot;.xlsx&quot;]" />
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="530,1980" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" TemplatePath="\Laskut yhteenveto\LaskutYhteenveto-0000.00.00.xlsx" UseTemplate="True" WorkbookPath="[Directory.GetCurrentDirectory + &quot;\Laskut yhteenveto\LaskutYhteenveto-&quot; + DateTime.Now.ToString(&quot;yyyy.MM.dd&quot;) + &quot;.xlsx&quot;]">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="LaskutYhteenveto" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,2300.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1676.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:RenameSheetX DisplayName="Rename Sheet" From="[LaskutYhteenveto.SelectedSheet]" sap:VirtualizedContainerService.HintSize="434,140" sap2010:WorkflowViewState.IdRef="RenameSheetX_1" To="Maksetut laskut" />
-                    <ueab:WriteCellX Cell="[LaskutYhteenveto.Sheet(&quot;Maksetut laskut&quot;).Cell(&quot;A1&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,161.33333333333334" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[&quot;Toimittaja&quot;]" />
-                    <ueab:WriteCellX Cell="[LaskutYhteenveto.Sheet(&quot;Maksetut laskut&quot;).Cell(&quot;B1&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,161.33333333333334" sap2010:WorkflowViewState.IdRef="WriteCellX_2" Value="[&quot;Y-tunnus&quot;]" />
-                    <ueab:WriteCellX Cell="[LaskutYhteenveto.Sheet(&quot;Maksetut laskut&quot;).Cell(&quot;C1&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,161.33333333333334" sap2010:WorkflowViewState.IdRef="WriteCellX_3" Value="[&quot;Summa&quot;]" />
-                    <ueab:InsertSheetX DisplayName="Insert Sheet" sap:VirtualizedContainerService.HintSize="434,188.66666666666666" sap2010:WorkflowViewState.IdRef="InsertSheetX_1" Name="Maksamattomat laskut" Workbook="[LaskutYhteenveto]" />
-                    <ueab:WriteCellX Cell="[LaskutYhteenveto.Sheet(&quot;Maksamattomat laskut&quot;).Cell(&quot;A1&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,161.33333333333334" sap2010:WorkflowViewState.IdRef="WriteCellX_4" Value="[&quot;Toimittaja&quot;]" />
-                    <ueab:WriteCellX Cell="[LaskutYhteenveto.Sheet(&quot;Maksamattomat laskut&quot;).Cell(&quot;B1&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,161.33333333333334" sap2010:WorkflowViewState.IdRef="WriteCellX_5" Value="[&quot;Y-tunnus&quot;]" />
-                    <ueab:WriteCellX Cell="[LaskutYhteenveto.Sheet(&quot;Maksamattomat laskut&quot;).Cell(&quot;C1&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,161.33333333333334" sap2010:WorkflowViewState.IdRef="WriteCellX_6" Value="[&quot;Summa&quot;]" />
-                    <ueab:InsertSheetX DisplayName="Insert Sheet" sap:VirtualizedContainerService.HintSize="434,188.66666666666666" sap2010:WorkflowViewState.IdRef="InsertSheetX_2" Name="Läpimenoaika" Workbook="[LaskutYhteenveto]" />
-                    <ueab:WriteCellX Cell="[LaskutYhteenveto.Sheet(&quot;Läpimenoaika&quot;).Cell(&quot;A1&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,161.33333333333334" sap2010:WorkflowViewState.IdRef="WriteCellX_7" Value="[&quot;Robotin läpimenoaika&quot;]" />
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Tiedosto luotu: LaskutYhteenveto-&quot; + DateTime.Now.toString(&quot;yyyy.MM.dd&quot;) + &quot;.xlsx&quot;]" />
+                    <ueab:RenameSheetX DisplayName="Rename Sheet" From="[LaskutYhteenveto.SelectedSheet]" sap:VirtualizedContainerService.HintSize="434,141.33333333333334" sap2010:WorkflowViewState.IdRef="RenameSheetX_1" To="Maksetut laskut" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Tiedosto luotu&quot;]" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Rivejä: &quot; + in_laskuTaulu.Rows.Count.ToString]" />
+                    <ueab:WriteRangeX Destination="[LaskutYhteenveto.Sheet(&quot;Maksetut laskut&quot;).Range(&quot;A1&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="434,164.66666666666666" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[in_laskuTaulu]" />
+                    <ueab:InsertSheetX DisplayName="Insert Sheet" sap:VirtualizedContainerService.HintSize="434,190.66666666666666" sap2010:WorkflowViewState.IdRef="InsertSheetX_1" Name="Maksamattomat laskut" Workbook="[LaskutYhteenveto]" />
+                    <ueab:InsertSheetX DisplayName="Insert Sheet" sap:VirtualizedContainerService.HintSize="434,190.66666666666666" sap2010:WorkflowViewState.IdRef="InsertSheetX_2" Name="Läpimenoaika" Workbook="[LaskutYhteenveto]" />
+                    <ueab:WriteCellX Cell="[LaskutYhteenveto.Sheet(&quot;Läpimenoaika&quot;).Cell(&quot;A1&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,164.66666666666666" sap2010:WorkflowViewState.IdRef="WriteCellX_7" Value="[&quot;Robotin läpimenoaika&quot;]" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Tiedosto luotu: LaskutYhteenveto-&quot; + DateTime.Now.toString(&quot;yyyy.MM.dd&quot;) + &quot;.xlsx&quot;]" />
                   </Sequence>
                 </ActivityAction>
               </ueab:ExcelApplicationCard.Body>
