@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>678,3159</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2154,3275</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Hae_Ostolaskut_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -123,13 +123,13 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Hae_Ostolaskut" sap:VirtualizedContainerService.HintSize="688,3094" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Hae_Ostolaskut" sap:VirtualizedContainerService.HintSize="688,3210" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Lappeenrannan kaupungin ostolaskut - Tietoaineisto avoindata.fi" sap:VirtualizedContainerService.HintSize="626,1039" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="7d1eb4e9-d486-4c00-8294-03f6117ab13c" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: Lappeenrannan kaupungin ostolaskut - Tietoaineisto avoindata.fi" sap:VirtualizedContainerService.HintSize="626,1039" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="7d1eb4e9-d486-4c00-8294-03f6117ab13c" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -176,12 +176,19 @@
         <uix:TargetApp Area="-8, -8, 2576, 1456" BrowserType="Edge" IconBase64="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" InformativeScreenshot="f706b717f7608d1b90a2904b65d20576.jpg" Selector="&lt;html app='msedge.exe' title='Lappeenrannan kaupungin ostolaskut - Tietoaineisto avoindata.fi' /&gt;" Title="Lappeenrannan kaupungin ostolaskut - Tietoaineisto avoindata.fi" Url="https://www.avoindata.fi/data/fi/dataset/lappeenrannan-kaupungin-ostolaskut" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="626,382" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="626,498" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <ui:CopyFile ContinueOnError="{x:Null}" Destination="[Environment.GetEnvironmentVariable(&quot;Userprofile&quot;) + &quot;\Documents\UiPath\DigiLii_harjoitusty-\Data&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[Environment.GetEnvironmentVariable(&quot;Userprofile&quot;) + &quot;\Downloads\ostolaskudata-2023.xlsx&quot;]" />
+        <Sequence sap:VirtualizedContainerService.HintSize="450,270" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[Environment.GetEnvironmentVariable(&quot;Userprofile&quot;) + &quot;\Documents\UiPath\DigiLii_harjoitusty-\Data&quot;]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="388,159" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="[Environment.GetEnvironmentVariable(&quot;Userprofile&quot;) + &quot;\Downloads\ostolaskudata-2023.xlsx&quot;]" />
+        </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="454,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
