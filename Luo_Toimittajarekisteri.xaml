@@ -1,11 +1,12 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Luo_Toimittajarekisteri" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ueabf="clr-namespace:UiPath.Excel.Activities.Business.Filter;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
+    <x:Property Name="out_payLimit" Type="OutArgument(x:Int32)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1717,1250</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>873.3333333333334,4326.666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Luo_Toimittajarekisteri_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -134,7 +135,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Luo_Toimittajarekisteri" sap:VirtualizedContainerService.HintSize="512,616" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence DisplayName="Luo_Toimittajarekisteri" sap:VirtualizedContainerService.HintSize="848,4262" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="startDay" />
       <Variable x:TypeArguments="x:String" Name="payLimitStr" />
@@ -155,6 +156,7 @@
       <Variable x:TypeArguments="x:String" Name="bankAccount" />
       <Variable x:TypeArguments="str:Match" Name="regexBankAccount" />
       <Variable x:TypeArguments="x:String" Name="bankAccountCheck" />
+      <Variable x:TypeArguments="x:Int32" Name="payLimit" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -162,42 +164,42 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Kysy_Tietoja" sap:VirtualizedContainerService.HintSize="450,80" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="Kysy_Tietoja" sap:VirtualizedContainerService.HintSize="786,3683.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Aloituspäivämäärä" sap:VirtualizedContainerService.HintSize="724,1157" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <Sequence DisplayName="Aloituspäivämäärä" sap:VirtualizedContainerService.HintSize="724,1182.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Not validDate]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="610,1046" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+        <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Not validDate]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="610.6666666666666,1072" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
           <ui:InterruptibleDoWhile.Body>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="576,910" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="576.6666666666666,934" sap2010:WorkflowViewState.IdRef="Sequence_8">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="534,239" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Anna päivämäärä muodossa pp.kk.vvvv (vain tammikuun päivät):" Title="Syötä aloituspäivämäärä">
+              <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="534.6666666666666,246" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Anna päivämäärä muodossa pp.kk.vvvv (vain tammikuun päivät):" Title="Syötä aloituspäivämäärä">
                 <ui:InputDialog.Result>
                   <OutArgument x:TypeArguments="x:String">[startDay]</OutArgument>
                 </ui:InputDialog.Result>
               </ui:InputDialog>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="534,543" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="534.6666666666666,560.6666666666666" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                 <TryCatch.Try>
-                  <Sequence sap:VirtualizedContainerService.HintSize="496,315" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <Sequence sap:VirtualizedContainerService.HintSize="496,321.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_9">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
                       <Assign.To>
                         <OutArgument x:TypeArguments="s:DateTime">[startDayDate]</OutArgument>
                       </Assign.To>
@@ -205,7 +207,7 @@
                         <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(startDay, "dd.MM.yyyy", CultureInfo.InvariantCulture)]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Boolean">[validDate]</OutArgument>
                       </Assign.To>
@@ -216,7 +218,7 @@
                   </Sequence>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="500,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="500.6666666666667,22" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -227,7 +229,7 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                       </ActivityAction.Argument>
-                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,85" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Virhe: Syötetty päivämäärä ei ole muodossa pp/kk/vvvv&quot;]" />
+                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Virhe: Syötetty päivämäärä ei ole muodossa pp/kk/vvvv&quot;]" />
                     </ActivityAction>
                   </Catch>
                 </TryCatch.Catches>
@@ -242,36 +244,36 @@
           </sap:WorkflowViewStateService.ViewState>
         </ui:InterruptibleDoWhile>
       </Sequence>
-      <Sequence DisplayName="Maksuraja" sap:VirtualizedContainerService.HintSize="724,2070" sap2010:WorkflowViewState.IdRef="Sequence_12">
+      <Sequence DisplayName="Maksuraja" sap:VirtualizedContainerService.HintSize="724,2350" sap2010:WorkflowViewState.IdRef="Sequence_12">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Not validSum]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="662,1959" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+        <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[Not validSum]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="662,1988.6666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
           <ui:InterruptibleDoWhile.Body>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="628,1823" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="628,1850.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_11">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="586,239" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Syötä summa, jonka alle menevät laskut maksetaan heti:" Title="Maksuraja">
+              <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="586,246" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Syötä summa, jonka alle menevät laskut maksetaan heti:" Title="Maksuraja">
                 <ui:InputDialog.Result>
                   <OutArgument x:TypeArguments="x:String">[payLimitStr]</OutArgument>
                 </ui:InputDialog.Result>
               </ui:InputDialog>
-              <If Condition="[payLimitStr.Contains(&quot;,&quot;) Or payLimitStr.Contains(&quot;.&quot;)]" sap:VirtualizedContainerService.HintSize="586,1456" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[payLimitStr.Contains(&quot;,&quot;) Or payLimitStr.Contains(&quot;.&quot;)]" sap:VirtualizedContainerService.HintSize="586,1477.3333333333333" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Then>
-                  <Sequence sap:VirtualizedContainerService.HintSize="476,295" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <Sequence sap:VirtualizedContainerService.HintSize="476,299.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_14">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,85" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;Älä käytä desimaaleja! Vain kokonaisluvut toimivat&quot;]" />
-                    <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_8">
+                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;Älä käytä desimaaleja! Vain kokonaisluvut toimivat&quot;]" />
+                    <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_8">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Boolean">[validSum]</OutArgument>
                       </Assign.To>
@@ -282,13 +284,13 @@
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence sap:VirtualizedContainerService.HintSize="552,979" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <Sequence sap:VirtualizedContainerService.HintSize="552,994" sap2010:WorkflowViewState.IdRef="Sequence_15">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="Assign_9">
+                    <Assign sap:VirtualizedContainerService.HintSize="510,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_9">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Boolean">[validSum]</OutArgument>
                       </Assign.To>
@@ -296,16 +298,16 @@
                         <InArgument x:TypeArguments="x:Boolean">[Integer.TryParse(payLimitStr, GlobalVariablesNamespace.GlobalVariables.payLimit)]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <If Condition="[Not validSum]" sap:VirtualizedContainerService.HintSize="510,769" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If Condition="[Not validSum]" sap:VirtualizedContainerService.HintSize="510,781.3333333333334" sap2010:WorkflowViewState.IdRef="If_2">
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="476,295" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                        <Sequence sap:VirtualizedContainerService.HintSize="476,299.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_16">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,85" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Virhe: Annettu maksuraja ei ole kokonaisluku&quot;]" />
-                          <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_10">
+                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Virhe: Annettu maksuraja ei ole kokonaisluku&quot;]" />
+                          <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_10">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:Boolean">[validSum]</OutArgument>
                             </Assign.To>
@@ -316,13 +318,13 @@
                         </Sequence>
                       </If.Then>
                       <If.Else>
-                        <Sequence sap:VirtualizedContainerService.HintSize="476,292" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                        <Sequence sap:VirtualizedContainerService.HintSize="476,298" sap2010:WorkflowViewState.IdRef="Sequence_17">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_6">
+                          <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_6">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:Int32">[GlobalVariablesNamespace.GlobalVariables.payLimit]</OutArgument>
                             </Assign.To>
@@ -330,7 +332,7 @@
                               <InArgument x:TypeArguments="x:Int32">[CInt(payLimitStr)]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+                          <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_5">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:Boolean">[validSum]</OutArgument>
                             </Assign.To>
@@ -347,9 +349,25 @@
             </Sequence>
           </ui:InterruptibleDoWhile.Body>
         </ui:InterruptibleDoWhile>
+        <Assign sap:VirtualizedContainerService.HintSize="662,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_36">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:Int32">[payLimit]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:Int32">[CInt(payLimitStr)]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Assign sap:VirtualizedContainerService.HintSize="662,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_37">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:Int32">[out_payLimit]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:Int32">[payLimit]</InArgument>
+          </Assign.Value>
+        </Assign>
       </Sequence>
     </Sequence>
-    <Sequence DisplayName="Lue_Data" sap:VirtualizedContainerService.HintSize="450,80" sap2010:WorkflowViewState.IdRef="Sequence_25">
+    <Sequence DisplayName="Lue_Data" sap:VirtualizedContainerService.HintSize="786,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_25">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -429,7 +447,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ueab:ExcelApplicationCard>
     </Sequence>
-    <Sequence DisplayName="Toimittajarekisteri_Data_Taulukko" sap:VirtualizedContainerService.HintSize="1342,5056" sap2010:WorkflowViewState.IdRef="Sequence_31">
+    <Sequence DisplayName="Toimittajarekisteri_Data_Taulukko" sap:VirtualizedContainerService.HintSize="786,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_31">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -909,7 +927,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ueab:ExcelApplicationCard>
     </Sequence>
-    <Sequence DisplayName="Tietojen_Siirto_Netvisoriin" sap:VirtualizedContainerService.HintSize="450,80" sap2010:WorkflowViewState.IdRef="Sequence_65">
+    <Sequence DisplayName="Tietojen_Siirto_Netvisoriin" sap:VirtualizedContainerService.HintSize="786,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_65">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1247,7 +1265,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="LogMessage_10" Message="[&quot;Toimittajarekisterin päivitys Netvisorissa suoritettu!&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="786,54" sap2010:WorkflowViewState.IdRef="LogMessage_10" Message="[&quot;Toimittajarekisterin päivitys Netvisorissa suoritettu!&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>

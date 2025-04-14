@@ -108,6 +108,7 @@
       <Variable x:TypeArguments="ui:PasswordCredentials" Name="Tunnukset" />
       <Variable x:TypeArguments="s:DateTime" Name="startTime" />
       <Variable x:TypeArguments="sd:DataTable" Name="laskuTaulu" />
+      <Variable x:TypeArguments="x:Int32" Name="payLimit" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -167,15 +168,16 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Luo_Toimittajarekisteri.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="438.6666666666667,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Luo_Toimittajarekisteri.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+        <InArgument x:TypeArguments="x:String" x:Key="BreakTriggerScopeInArgument" />
+        <OutArgument x:TypeArguments="x:Int32" x:Key="out_payLimit">
+          <VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="payLimit" />
+        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Kirjaa_Kirjanpitoon.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="438.6666666666667,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Kirjaa_Kirjanpitoon.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="BreakTriggerScopeInArgument" />
-        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_laskuTaulu">
-          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="laskuTaulu" />
-        </OutArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_laskuTaulu">[laskuTaulu]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Luo_Excel.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="438.6666666666667,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Luo_Excel.xaml">
@@ -183,13 +185,14 @@
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_laskuTaulu">
           <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="laskuTaulu" />
         </InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="in_payLimit">
+          <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="payLimit" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Kirjaudu_Ulos.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="438.6666666666667,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Kirjaudu_Ulos.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="s:DateTime" x:Key="in_startTime">
-          <VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="startTime" />
-        </InArgument>
+        <InArgument x:TypeArguments="s:DateTime" x:Key="in_startTime">[startTime]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
