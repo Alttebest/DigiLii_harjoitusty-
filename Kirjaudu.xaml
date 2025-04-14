@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>873.3333333333334,1133.3333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1884,1628</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Kirjaudu_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -112,7 +112,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Kirjaudu" sap:VirtualizedContainerService.HintSize="586,1068.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Kirjaudu" sap:VirtualizedContainerService.HintSize="584,1563" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Tunnus" />
     </Sequence.Variables>
@@ -121,21 +121,21 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: Netvisor" sap:VirtualizedContainerService.HintSize="524,958" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="44208ddf-21c4-4138-85e6-306909462b97" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Netvisor" sap:VirtualizedContainerService.HintSize="522,1452" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="44208ddf-21c4-4138-85e6-306909462b97" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="490,738.6666666666666" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="488,1235" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <TryCatch.Try>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1026" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1007" sap2010:WorkflowViewState.IdRef="Sequence_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Käyttäjätunnus'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="44208ddf-21c4-4138-85e6-306909462b97" Text="[in_Tunnukset.Username]" Version="V3">
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Käyttäjätunnus'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="44208ddf-21c4-4138-85e6-306909462b97" Text="[in_Tunnukset.Username]" Version="V3">
                   <uix:NTypeInto.Target>
                     <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/login/login.aspx" DesignTimeRectangle="277, 321, 220, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT username'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='username' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='username' type='text' tag='INPUT' class='' aaname='' /&gt;" Guid="ad45f9d9-03f7-46ff-835c-3ae023d6d9d3" InformativeScreenshot="12e8b4b809875c9c532a316891de3903.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                       <uix:TargetAnchorable.Anchors>
@@ -146,7 +146,7 @@
                     </uix:TargetAnchorable>
                   </uix:NTypeInto.Target>
                 </uix:NTypeInto>
-                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Salasana'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="44208ddf-21c4-4138-85e6-306909462b97" SecureText="[in_Tunnukset.SecurePassword]" Version="V3">
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Salasana'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="44208ddf-21c4-4138-85e6-306909462b97" SecureText="[in_Tunnukset.SecurePassword]" Version="V3">
                   <uix:NTypeInto.Target>
                     <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/login/login.aspx" DesignTimeRectangle="277, 361, 220, 30" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'INPUT userpass'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='userpass' tableRow='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='userpass' type='password' tag='INPUT' class='' aaname='' /&gt;" Guid="369635cc-d2e6-4fab-9002-220c0d082e04" InformativeScreenshot="5685b6cd15763015d8d616bc13160fe7.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                       <uix:TargetAnchorable.Anchors>
@@ -157,7 +157,7 @@
                     </uix:TargetAnchorable>
                   </uix:NTypeInto.Target>
                 </uix:NTypeInto>
-                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Kirjaudu sisään'" sap:VirtualizedContainerService.HintSize="388,197.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="44208ddf-21c4-4138-85e6-306909462b97" Version="V3">
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Kirjaudu sisään'" sap:VirtualizedContainerService.HintSize="388,193" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="44208ddf-21c4-4138-85e6-306909462b97" Version="V3">
                   <uix:NClick.Target>
                     <uix:TargetAnchorable BrowserURL="https://koulutus.netvisor.fi/evo/login/login.aspx" DesignTimeRectangle="375, 421, 122, 30" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Kirjaudu sisään'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='submit' tag='INPUT' class='' aaname='Kirjaudu sisään' check:text='Kirjaudu sisään' /&gt;" Guid="b63c5aae-9591-4618-881a-5e0e05788557" InformativeScreenshot="530d5a6e30d385f4f1ffa4e74091e623.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Netvisor' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                   </uix:NClick.Target>
@@ -175,14 +175,14 @@
                     </uix:VerifyExecutionOptions>
                   </uix:NClick.VerifyOptions>
                 </uix:NClick>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Kirjautuminen onnistui&quot;]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Kirjautuminen onnistui&quot;]" />
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="456,565.3333333333334" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="454,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -190,14 +190,14 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                   </ActivityAction.Argument>
-                  <Sequence sap:VirtualizedContainerService.HintSize="450,494.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence sap:VirtualizedContainerService.HintSize="450,401" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Kirjautuessa tapahtui virhe&quot;]" />
-                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{ &quot;Kirjautuessa tapahtui virhe&quot;, &quot;&quot;, &quot;&quot; }]" DataTable="[inout_virheTaulu]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="388,191.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Kirjautuessa tapahtui virhe&quot;]" />
+                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{ &quot;Kirjautuessa tapahtui virhe&quot;, &quot;&quot;, &quot;&quot; }]" DataTable="[inout_virheTaulu]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="388,191" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                   </Sequence>
                 </ActivityAction>
               </Catch>
